@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steam Games Shop - Trung Kien</title>
+    <link rel="stylesheet" href="steam.css">
+</head>
+<body>
+    <!-- Begin: Header -->
+    <div class="header_content">
+        <div class="logosteam">
+            <a href="https://store.steampowered.com/" target="_blank">
+                <img src="https://store.cloudflare.steamstatic.com/public/shared/images/responsive/header_logo.png" height="36" alt="STEAM">
+            </a>
+        </div>
+        <h3 id="displayTitle">recommend</h3>
+        <ul class="nav">
+            <li>Home</li>
+            <li>Trending</li>
+            <li>About us</li>
+        </ul>
+
+    </div>
+    
+    <!-- End: Header -->
+
+    <!-- Begin: Main -->
+    <div id="mainBox">
+
+        <div class="search_area">
+            <div id="store_search">
+                <form action="">
+                    <div class="searchBox">
+                        <input type="text" id="search_game_name" placeholder="Search" size="22" class="defaultSearch" size="30" maxlength="64">
+                        <div id="searchButton">
+                            <img src="https://www.freeiconspng.com/thumbs/search-icon-png/search-icon-png-18.png" alt="btnSearch" style="height: 100%; width: 100%; object-fit: contain;">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="category">
+                <ul class="categoryGroup" id="categoryGenre">
+                    <li id="action">Action</li>
+                    <li id="casual">Casual</li>
+                    <li id="fps">FPS</li>
+                    <li id="mmo">MMO</li>
+                    <li id="rpg">RPG</li>
+                    <li id="rts">RTS</li>
+                    <li id="sport">Sport</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="showing_game" id="showGame">
+            <div>
+                <!-- <div class="game_wrap">
+                    <div class="coverGame">
+                       <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1282100/header.jpg?t=1686251372" alt="Game Picture">
+                       <div class="gameInfo">
+                         <p>Remnant II</p>
+                         <p>49$</p>
+                       </div>
+                    </div>
+                </div> -->
+                <div id="loading" class="loading">Loading...</div>
+
+            </div>
+            
+
+        </div>
+    </div>
+    <!-- End: Main -->
+    <script src="steam.js"></script>
+</body>
+</html>

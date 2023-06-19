@@ -1,0 +1,319 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+};
+
+body {
+  color: #c6d4df;
+  background-color: #1b2838;
+  min-height: 100vh;
+}
+
+.header_content {
+    background-color: #171a21;
+    position: sticky;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 72px;
+    top:0;
+    z-index: 10;
+    text-transform: uppercase;
+}
+
+#displayTitle {
+    color: #c6d4df;
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.nav > li{
+    text-transform: uppercase;
+    color: #c6d4df;
+    padding-right: 40px;
+    list-style-type: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.nav > li:hover, #displayTitle:hover {
+    filter: brightness(130%);
+}
+
+ul .nav {
+    display: flex;
+    list-style-type: none;
+    cursor: pointer;
+}
+
+#mainBox {
+    position: relative;
+    display: flex;
+    background-color: #1b2838;
+    /* margin-top: 72px; */
+    width: 100%;
+    justify-content: space-around;
+    min-height: 100vh;
+}
+
+/* Search box */
+
+.search_area {
+    max-width: 210px;
+    flex-grow: 1;
+    margin-top: 30px;
+}
+
+.defaultSearch {
+    border: none;
+    background-color: transparent;
+    margin-left: 8px;
+    width: calc(100% - 25px - 8px);
+    outline: none;
+    line-height: 26px;
+    background: transparent;
+    font-size: 1.2em;
+    color: #fff;
+}
+
+.searchBox {
+    background-image: none;
+    background-color: #316282;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 0px rgb(255 255 255 / 20%);
+    color: #fff;
+    margin-bottom: 0px;
+    outline: none;
+    height: 27px;
+    padding: 0px 6px;
+    position: relative;
+    margin-left: 0px;
+}
+
+#store_search{
+    height: 30px;
+    display: flex;
+    max-width: 210px;
+}
+
+#searchButton {
+    position: absolute;
+    font-size: 20px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: #66c0f4;
+    color: #fff;
+    border: 0;
+    outline: 0 none;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 3px;
+    width: 28px;
+    height: 26px;
+}
+#searchButton:hover {
+    filter: brightness(120%);
+}
+#searchButton img {
+    position: absolute; 
+    padding: 4px;
+    top: 0;
+    right: 0;
+    font-weight: bolder;
+}
+
+/* Category Group */
+
+.categoryGroup {
+    color: #66c0f4;
+    font-weight: bolder;
+    margin-top: 1.5em;
+    margin-left: 0;
+    list-style-type: none;
+    border-top: 2px solid #316282;
+    padding-top: 35px;
+    padding-left: 10px;
+}
+
+.categoryGroup li {
+    margin-bottom: 25px;
+    transition: background-color 0.6s ease-in-out;
+}
+
+.categoryGroup li:hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: brightness(200%);
+    background-color: #1f4c6a;
+    border-radius: 4px;
+    /* min-height: 42px; */
+    text-align: center;
+    line-height: 42px;
+    cursor: pointer;
+}
+
+/* Showing Game Display */
+.showing_game {
+    /* flex-grow: 4; */
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    margin: 30px;
+    width: 80%;
+}
+div {
+    display: block;
+    height: fit-content;
+}
+.showing_game .game_wrap {
+    width: 270px;
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px;
+    flex-basis: 0 0 25%;
+}
+.showing_game .game_wrap:hover {
+    cursor: pointer;
+    filter: brightness(120%);
+    -webkit-box-shadow: 1px 2px 13px 0px #1E27B2; 
+box-shadow: 1px 2px 13px 0px #1E27B2;
+    transform: translateY(-6px);
+}
+
+.showing_game .game_wrap .coverGame {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+} 
+
+.showing_game .game_wrap .coverGame img {
+    object-fit: contain;
+}
+
+.showing_game .game_wrap .coverGame .gameInfo {
+    display: flex;
+    justify-content: space-evenly;
+    font-family: "Motiva Sans", Sans-serif;
+    font-size: 1.2em;
+    background: linear-gradient( -45deg, rgba(64, 121, 153, 1) 5%, rgba(42, 62, 89, 1) 95% );
+    min-height: 55px;
+    /* height: 50px; */
+    align-items: center;
+    /* word-break: break-all; */
+}
+
+.showing_game .game_wrap .coverGame .gameInfo p {
+    padding: 5px;
+    color: #acdbf5;
+}
+
+/* game detai */
+.showing_game_detail .title_contain {
+    margin-bottom: 10px;
+}
+
+.showing_game_detail .title_contain .title {
+    color: #fff;
+    font-family: Motiva Sans, Arial, Helvetica, sans-serif;
+    font-size: 1.7em;
+    line-height: 32px;
+    text-overflow: ellipsis;
+    font-weight: normal;
+}
+
+.showing_game_detail .title_contain .game_price {
+    color: #acdbf5;
+    padding: 0 3px;
+    line-height: 17px;
+}
+
+.img_detail {
+    display: flex;
+    padding: 16px;
+    margin: 0px auto;
+    margin-bottom: 8px;
+    margin-top: 10px;
+    background: linear-gradient( to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100% );
+    padding: 16px;
+}
+
+.game_description {
+    max-height: 120px;
+    max-width: 400px;
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 15px;
+    padding: 0 16px;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+    color: #fff;
+}
+
+.game_information {
+    font-size: 12px;
+    padding: 16px;
+    min-width: 94px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #66c0f4;
+    line-height: 20px;
+}
+
+.tags_contain {
+    background: linear-gradient( to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100% );
+    font-size: 12px;
+    padding: 16px;
+    color: #fff;
+}
+
+.tags_contain .tags {
+    display: flex;
+}
+.tags_contain .tags .tag {
+    display: inline-block;
+    line-height: 19px;
+    padding: 0 7px;
+    background-color: rgba(103, 193, 245, 0.2);
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 4px;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #67c1f5;
+}
+
+.tags_contain .tags .tag:hover {
+    filter: brightness(120%);
+}
+
+.loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: white;
+    font-size: 2rem;
+  }
+
+  .categoryGroup li {
+    text-transform: uppercase;
+  }
+  
+
+
+
+
